@@ -87,14 +87,14 @@ button {
     transition: background-color 0.2s ease;
 }
 
-button:hover {
-    background-color: #36338d;
-}
-
 button:disabled {
     background-color: gray;
     transition: none;
     cursor: auto;
+}
+
+.buttons button:hover:enabled {
+    background-color: #36338d;
 }
 
 .tag {
@@ -127,6 +127,3 @@ button:disabled {
     margin-right: 5px;
 }
 
-.delete:hover {
-    background-color: #e3837d;
-}
