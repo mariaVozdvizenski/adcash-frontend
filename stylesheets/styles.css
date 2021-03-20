@@ -64,6 +64,7 @@ textarea {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  min-height: 30px;
 }
 
 .buttons {
@@ -76,6 +77,14 @@ textarea {
           justify-content: space-between;
 }
 
+#save {
+  display: none;
+}
+
+.active {
+  display: inline !important;
+}
+
 button {
   background-color: #0d0b3d;
   border: none;
@@ -85,9 +94,23 @@ button {
   width: 60px;
   height: 30px;
   cursor: pointer;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #36338d;
+}
+
+button:disabled {
+  background-color: gray;
+  -webkit-transition: none;
+  transition: none;
+  cursor: auto;
 }
 
 .tag {
+  font-size: 0;
   margin-right: 10px;
   margin-bottom: 10px;
   display: -webkit-box;
@@ -120,5 +143,9 @@ button {
   background-repeat: no-repeat;
   background-color: transparent;
   margin-right: 5px;
+}
+
+.delete:hover {
+  background-color: #e3837d;
 }
 /*# sourceMappingURL=styles.css.map */
